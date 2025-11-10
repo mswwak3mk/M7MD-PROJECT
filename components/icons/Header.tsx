@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { UserIcon, EyeIcon } from './icons/Icons';
+import { UserIcon, EyeIcon } from './Icons';
 
 interface HeaderProps {
   studentName: string;

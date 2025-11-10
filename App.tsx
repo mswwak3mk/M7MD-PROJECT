@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import type { ProfileData, Comment } from './types';
 import StudentView from './views/StudentView';
 import VisitorView from './views/VisitorView';
-import Header from './components/Header';
+import Header from './components/icons/Header';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -110,13 +111,5 @@ const App: React.FC = () => {
     </div>
   );
 };
-
-// You need to install react-toastify: npm install react-toastify
-// Since this environment doesn't support package installation, we'll mock it.
-// In a real project, you'd have this in your package.json.
-// For now, let's just make sure the code is complete.
-const a:any = ToastContainer; 
-const b:any = toast;
-
 
 export default App;

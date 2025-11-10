@@ -36,7 +36,7 @@ const StudentView: React.FC<StudentViewProps> = ({ data, onUpdate }) => {
   };
   
   const handleRemoveItem = (category: keyof ProfileData, id: number) => {
-    if (confirm('هل أنت متأكد من أنك تريد حذف هذا العنصر؟')) {
+    if (window.confirm('هل أنت متأكد من أنك تريد حذف هذا العنصر؟')) {
       const currentItems = editableData[category] as ListItem[];
       const updatedItems = currentItems.filter(item => item.id !== id);
       const newData = { ...editableData, [category]: updatedItems };

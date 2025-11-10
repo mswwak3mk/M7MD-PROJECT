@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { ProfileData, Comment } from '../types';
 import InfoCard from '../components/InfoCard';
@@ -42,12 +41,18 @@ const VisitorView: React.FC<VisitorViewProps> = ({ data, onAddComment }) => {
         </div>
       </section>
 
+      {/* About Me Section */}
+      <section id="about-me-text" className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-6 md:p-8 shadow-2xl shadow-purple-900/20">
+        <h2 className="text-3xl font-bold font-orbitron text-cyan-400 mb-4 text-center">عني</h2>
+        <p className="text-gray-300 text-lg leading-relaxed text-center max-w-2xl mx-auto">
+          أنا محمد كمال خليل، طالب في الصف الأول المتوسط. أحب استكشاف عالم التكنولوجيا والألعاب الإلكترونية، كما أنني لاعب نشيط في كرة القدم والسباحة. أسعى دائمًا للتفوق في دراستي واكتساب مهارات جديدة تساعدني على تحقيق أحلامي وطموحاتي المستقبلية.
+        </p>
+      </section>
+
       {/* Cards Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <InfoCard title="إنجازاتي" items={data.achievements.map(a => a.text)} icon={<LightbulbIcon />} />
-        {/* FIX: Added the missing 'icon' prop to satisfy the component's required props. */}
         <InfoCard title="مهاراتي" items={data.skills.map(s => s.text)} icon={<GamepadIcon />} itemIcons={skillIcons} />
-        {/* FIX: Added the missing 'icon' prop to satisfy the component's required props. */}
         <InfoCard title="المواد المفضلة" items={data.favoriteSubjects.map(s => s.text)} icon={<ScienceIcon />} itemIcons={subjectIcons}/>
       </div>
 
